@@ -1,7 +1,8 @@
 <template>
-    <h1>ciao</h1>
-</template>
+    <div>
 
+    </div>
+</template>
 <script>
 export default {
     data() {
@@ -11,8 +12,7 @@ export default {
     },
 }
 </script>
-
 <style lang="scss" scoped>
 @use '../styles/partials/mixins' as*;
-@use '../styles/partials/variables' as*;
+@use '../styles/partials/variables'
 </style>
