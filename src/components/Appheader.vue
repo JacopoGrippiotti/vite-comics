@@ -1,5 +1,7 @@
 <template>
-    <div class="container">
+
+    <header>
+      <div class="container">
         <div class="logo-img" >
             <img :src='logoImage.src' alt="">
         </div>
@@ -10,7 +12,8 @@
                 </a>
             </li>
         </ul>
-    </div>
+      </div>
+    </header>
 </template>
 
 <script>
@@ -42,16 +45,20 @@ export default {
   @use '../styles/partials/mixins' as*;
   @use '../styles/partials/variables' as*;
 
+  header{
+    height: $sectionsHeight;
+    padding: $sectionPadding;
+    @include flex(row, center,center,nowrap);
+  }
   div.container{
     @include flex(row,space-between,none,nowrap);
-    margin: 20px auto;
+    
     ul{
         display: flex;
         font-size: 1.1rem;
         font-weight: bold;
         li{
             margin: 0 5px;
-            height: 100%;
             align-items: center;
             display: flex;
             position: relative;
@@ -68,6 +75,7 @@ export default {
                 position: absolute;
                 width: 100%;
                 top: 100%;
+                right: 0;
             }
             
             &:hover::after{
