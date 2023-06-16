@@ -47,7 +47,6 @@ export default {
 
   header{
     height: $sectionsHeight;
-    padding: $sectionPadding;
     @include flex(row, center,center,nowrap);
   }
   div.container{

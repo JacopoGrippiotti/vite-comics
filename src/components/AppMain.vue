@@ -1,9 +1,12 @@
 <template>
-    <div class="container">
+    <main>
+      <div class="container">
         <h1>
             Content goes here
         </h1>
-    </div>
+      </div>
+    </main>
+    
 </template>
 <script>
 export default {
@@ -19,11 +22,17 @@ export default {
 @use '../styles/partials/mixins' as*;
 @use '../styles/partials/variables' as*;
 
-div.container{
+main{
+    height: $sectionsHeight;
+    @include flex(row,center,center,nowrap);
     background-color: black;
+    
+    h1{
+      font-size: 1.5rem;
+      color: white;
+      padding-left: 35px;
+    }
 }
-h1{
-    font-size: 1.5rem;
-    color: white;
-}
+
+
 </style>
