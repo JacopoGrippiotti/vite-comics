@@ -16,7 +16,13 @@
         
         <div class="footer-bottom">
             <div class="container footer-jumbo-bottom">
+                <div class="signup-button">
+                    Sign-up Now!
+                </div>
 
+                <div class="contacts">
+                    <img v-for="(icon,index) in iconList" :src="getIcon(index)" alt="">
+                </div>
             </div>
         </div>
         
@@ -67,9 +73,22 @@ export default {
                            "DC Power Visa"]
                 }
 
+            ],
+            iconList:[
+                "../../src/assets/img/footer-facebook.png",
+                "../../src/assets/img/footer-twitter.png",
+                "../../src/assets/img/footer-youtube.png",
+                "../../src/assets/img/footer-pinterest.png",
+                "../../src/assets/img/footer-periscope.png"
             ]
         }
+
     },
+                methods:{
+                    getIcon(index){
+                     return this.iconList[index]
+                    }
+                }
 }
 </script>
 <style lang="scss">
@@ -130,9 +149,26 @@ export default {
         background-color: rgb(74, 73, 73);
         height: 100px;
         width: 100%;
-       }
-       
-      
+        @include flex(row,space-between,center,nowrap);
+           div.footer-jumbo-bottom{
+            margin: 0 auto;
+            @include flex(row,space-between,center,nowrap);
+              div.signup-button{
+                 border: 1px solid blue;
+                 width: 20%;
+                 color: white;
+                 font-size: 1.2rem;
+                 text-align: center;
+                 padding: 8px;
+                 font-weight: bold;
+                }
+ 
+              div.contacts{
+                display: flex;
+                width: 20%;
+              }
+            }     
+        }
    }
 
 </style>
