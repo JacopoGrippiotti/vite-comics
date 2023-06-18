@@ -73,7 +73,7 @@ export default {
                 content: '';
                 position: absolute;
                 width: 100%;
-                top: 100%;
+                top: 115%;
                 right: 0;
             }
             
