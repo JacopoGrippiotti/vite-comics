@@ -102,10 +102,13 @@ export default {
 
 main{
     display: flex;
-    background-color: black;
+    background-color: rgb(86, 81, 81);
 
     div.container{
       @include flex(row,space-between,none,wrap);
+      margin: 0 auto;
+      padding-top: 40px;
+      padding-bottom: 80px;
     }
 }
 

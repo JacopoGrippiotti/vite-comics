@@ -98,7 +98,7 @@ export default {
 
 
    footer{
-    height: 780px;
+    height: 100%;
     @include flex(column,none,center,nowrap);
        
        div.footer-top{
