@@ -21,6 +21,7 @@
                 </div>
 
                 <div class="contacts">
+                    <h2>Follow Us</h2>
                     <img v-for="(icon,index) in iconList" :src="getIcon(index)" alt="">
                 </div>
             </div>
@@ -145,17 +146,20 @@ export default {
 
             }
        }
+       
        div.footer-bottom{
-        background-color: rgb(74, 73, 73);
+        background-color: rgb(63, 61, 61);
         height: 100px;
         width: 100%;
         @include flex(row,space-between,center,nowrap);
-           div.footer-jumbo-bottom{
+           
+        div.footer-jumbo-bottom{
             margin: 0 auto;
             @include flex(row,space-between,center,nowrap);
-              div.signup-button{
+              
+            div.signup-button{
                  border: 1px solid blue;
-                 width: 20%;
+                 width: 13%;
                  color: white;
                  font-size: 1.2rem;
                  text-align: center;
@@ -165,7 +169,18 @@ export default {
  
               div.contacts{
                 display: flex;
-                width: 20%;
+                width: 27%;
+                margin: 10px 10px;
+
+                h2{
+                    margin-right: 20px;
+                    color: rgb(56, 125, 246);
+                    font-weight: 700;
+                }
+                img{
+                    height: 30px;
+                    margin: 0 5px;
+                }
               }
             }     
         }
