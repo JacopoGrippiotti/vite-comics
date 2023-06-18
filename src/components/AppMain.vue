@@ -102,7 +102,7 @@ export default {
 
 main{
     display: flex;
-    background-color: rgb(86, 81, 81);
+    background-color: rgb(39, 37, 37);
 
     div.container{
       @include flex(row,space-between,none,wrap);

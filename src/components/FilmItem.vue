@@ -1,6 +1,9 @@
 <template>
     <div class="image-container">
-        <img :src="filmElement.thumb" alt="">
+        <div class="wrapper">
+            <img :src="filmElement.thumb" alt="">
+        </div>
+        
         <h3>{{ filmElement.series }}</h3>
     </div>
 </template>
@@ -25,16 +28,20 @@ export default {
         flex-direction: column;
         justify-content: space-between;
 
+        div.wrapper{
+            height: calc(100% - 30px);
+        }
+
         h3{
             color: white;
             font-size: 0.70rem;
             text-transform: uppercase;
+            margin-top: 5px;
         }
         img{
-            height: calc(100% - 30px) ;
+            height: 100%;
             width: 100%;
             object-fit: cover;
-
         }
     }
 </style>
